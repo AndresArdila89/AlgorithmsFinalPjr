@@ -70,6 +70,7 @@ string verifyIfNumber(string label){
 
 	while (key == 0)
 	{
+		cout << label;
 		numberToConv = ReadString(label);
 		len = numberToConv.length();
 	
@@ -110,10 +111,11 @@ float ReadNumber(string label) {
 	
 	float number;
 	string numberToConv;
-
-		
 	
-	return 0;
+	numberToConv = verifyIfNumber(label);
+	number = convToNumber(numberToConv);
+	
+	return number;
 
 }
 

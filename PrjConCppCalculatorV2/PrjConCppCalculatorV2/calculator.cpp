@@ -4,6 +4,7 @@ int main() {
 	SetConsoleTitle("CALCULATOR V1 by ANDRES ARDILA");
 	system("color F0");
 	short x = 0;
+	float number;
 	
 	introductionScreen("Calculator V2");
 	
@@ -14,7 +15,8 @@ int main() {
 	{
 	case 1:
 		cout << "Addition\n";
-		ReadNumber("Enter the number: ");
+		number = ReadNumber("Enter the number: ");
+		cout << number + 10;
 		system("pause");
 		break;
 	case 2:
