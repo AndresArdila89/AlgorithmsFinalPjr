@@ -23,5 +23,8 @@
     <ClInclude Include="LaSalleLibraryOne.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="editconio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

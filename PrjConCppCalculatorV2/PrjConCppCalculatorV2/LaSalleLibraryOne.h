@@ -1,12 +1,14 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include <iomanip>
+#include <Windows.h>
 using namespace std;
 //---------------------------------------------------------//
 //-------------------- ESSENTIAL --------------------------//
 //---------------------------------------------------------//
 void DisplayTitle(string title) {
-	short strlenght;
+	short strlenght,xDisplacement=65;
 	char line = '-';
 	strlenght = title.length();
 
@@ -15,10 +17,13 @@ void DisplayTitle(string title) {
 	{
 		title[i] = toupper(title[i]);
 	}
-	cout << "\t\t" << title << "\n";
-	cout << "\t\t";
+
+	cout << setfill(' ') << setw(xDisplacement-1);
+	cout << title << "\n";
+	cout << setfill(' ') << setw(xDisplacement - strlenght);
 	for (short i = 0; i < strlenght; i++)
 	{
+		
 		cout << line;
 	}
 	cout << endl;
@@ -59,10 +64,92 @@ void Display(string text, float value) {
 
 
 
+string verifyIfNumber(string label){
+	short len,key = 0,dot = 0;
+	string numberToConv;
+
+	while (key == 0)
+	{
+		numberToConv = ReadString(label);
+		len = numberToConv.length();
+	
+	for (short i = 0; i < len; i++)
+	{
+		if ((numberToConv[i] >= '0' && numberToConv[i] <= '9') || numberToConv[i] == '.')
+		{
+			key = 1;
+			if (numberToConv[i] == '.') {
+				dot += 1;
+				if (dot > 1)
+				{
+					key = 0;
+					i = len;
+				}
+			}
+		}
+		else
+		{
+			key = 0;
+			i = len;
+		}	
+	}
+	}
+	
+	
+	return numberToConv;
+
+}
+
+float convToNumber(string numberToConv) {
+	float number = stof(numberToConv);
+
+	return number;
+}
+
+float ReadNumber(string label) {
+	
+	float number;
+	string numberToConv;
+
+		
+	
+	return 0;
+
+}
+
+
+
+//---------------------------------------------------------//
+//------------------ FinalCalculator ----------------------//
+//---------------------------------------------------------//
+
+void introductionScreen(string title) {
+
+	
+	DisplayTitle(title);
+	system("pause");
+	
+	
+}
+short menu() {
+	short menuSelection;
+
+	system("cls");
+
+	cout << "1.) Addition.\n";
+	cout << "2.) Substraction.\n";
+	cout << "3.) Multiplication.\n";
+	cout << "4.) Division.\n";
+
+	menuSelection = stoi(ReadString("Select the operation you want to do:\n"));
+	system("cls");
+	return menuSelection;
+	
+}
+
 //---------------------------------------------------------//
 //------------------ Revenue quebec -----------------------//
 //---------------------------------------------------------//
-
 
 char ReadCharNdValidate(string label, char conditionOne, char conditionTwo) {
 

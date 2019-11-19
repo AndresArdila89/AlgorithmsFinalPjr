@@ -126,6 +126,7 @@
     <ClCompile Include="calculator.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="editconio.h" />
     <ClInclude Include="LaSalleLibraryOne.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
