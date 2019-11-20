@@ -17,16 +17,16 @@ void DisplayTitle(string title) {
 	{
 		title[i] = toupper(title[i]);
 	}
-
+	cout << '\n';
 	cout << setfill(' ') << setw(xDisplacement-1);
 	cout << title << "\n";
-	cout << setfill(' ') << setw(xDisplacement - strlenght);
+	/*cout << setfill(' ') << setw(xDisplacement - strlenght);
 	for (short i = 0; i < strlenght; i++)
 	{
 		
 		cout << line;
 	}
-	cout << endl;
+	cout << endl;*/
 }
 
 string ReadString(string label) {
@@ -70,13 +70,14 @@ string verifyIfNumber(string label){
 
 	while (key == 0)
 	{
-		cout << label;
+		
 		numberToConv = ReadString(label);
 		len = numberToConv.length();
+		dot = 0;
 	
 	for (short i = 0; i < len; i++)
 	{
-		if ((numberToConv[i] >= '0' && numberToConv[i] <= '9') || numberToConv[i] == '.')
+		if ((numberToConv[i] >= '0' && numberToConv[i] <= '9') || numberToConv[i] == '.' || numberToConv[i] == '-')
 		{
 			key = 1;
 			if (numberToConv[i] == '.') {
@@ -121,6 +122,7 @@ float ReadNumber(string label) {
 
 
 
+
 //---------------------------------------------------------//
 //------------------ FinalCalculator ----------------------//
 //---------------------------------------------------------//
@@ -133,11 +135,18 @@ void introductionScreen(string title) {
 	
 	
 }
+
+void windowHeader(string label, char simbol) {
+	DisplayTitle(label);
+	cout << setfill(simbol) << setw(121);
+	cout << '\n';
+}
+
 short menu() {
 	short menuSelection;
 
 	system("cls");
-
+	windowHeader("calculator main menu", '=');
 	cout << "1.) Addition.\n";
 	cout << "2.) Substraction.\n";
 	cout << "3.) Multiplication.\n";
@@ -147,6 +156,79 @@ short menu() {
 	system("cls");
 	return menuSelection;
 	
+}
+
+float addNumbers(float inputNum, float ans) {
+
+	ans = inputNum + ans;
+
+	return ans;
+}
+
+
+
+float calculateAddition(string label) {
+	short amountOfNum = ReadNumber(label);
+	float number, ans = 0;
+
+	for (short i = 0; i < amountOfNum; i++) {
+		number = ReadNumber("Enter the number: ");
+		ans = addNumbers(number, ans);
+	}
+
+	return ans;
+}
+
+float Add(float lastResoult) {
+	float ans;
+
+	windowHeader("ADDITION", '=');
+
+	ans = calculateAddition("Enter the amount of numbers to add: ");
+
+	Display("The answer is: ", ans);
+
+	ans = 0;
+
+	system("pause");
+	return ans;
+}
+
+
+//-------------substraction--------------------------------//
+float substractNumbers(float inputNum, float ans) {
+
+	ans = inputNum - ans;
+
+	return ans;
+} 
+
+float calculateSubstraction(string label) {
+	
+	float numberOne,numberTwo, ans = 0;
+
+	
+		numberOne = ReadNumber("Enter the number: ");
+		numberTwo = ReadNumber("Enter the number: ");
+		ans = substractNumbers(numberOne, numberTwo);
+	
+
+	return ans;
+}
+
+float Substract(float lastResoult) {
+	float ans;
+
+	windowHeader("SUBSTRACTION", '=');
+
+	ans = calculateSubstraction("Enter the amount of numbers to add: ");
+
+	Display("The answer is: ", ans);
+
+	ans = 0;
+
+	system("pause");
+	return ans;
 }
 
 //---------------------------------------------------------//

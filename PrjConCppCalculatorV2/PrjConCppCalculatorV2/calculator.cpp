@@ -1,26 +1,24 @@
 #include "LaSalleLibraryOne.h"
 
 int main() {
-	SetConsoleTitle("CALCULATOR V1 by ANDRES ARDILA");
+	SetConsoleTitle("CALCULATOR V2 by ANDRES ARDILA");
 	system("color F0");
 	short x = 0;
-	float number;
+	float number,ans=0;
 	
 	introductionScreen("Calculator V2");
 	
 	while (x == 0)
 	{
+		
 
 	switch (menu())
 	{
 	case 1:
-		cout << "Addition\n";
-		number = ReadNumber("Enter the number: ");
-		cout << number + 10;
-		system("pause");
+		Add(0);
 		break;
 	case 2:
-		cout << "substraction";
+		Substract(0);
 		system("pause");
 		break;
 	case 3:
