@@ -14,22 +14,19 @@ int main() {
 
 	switch (menu())
 	{
-	case 1:
+	case '1':
 		Add(0);
 		break;
-	case 2:
+	case '2':
 		Substract(0);
-		system("pause");
 		break;
-	case 3:
-		cout << "multiplication";
-		system("pause");
+	case '3':
+		Multiply(0);
 		break;
-	case 4:
-		cout << "division";
-		system("pause");
+	case '4':
+		Divide(0);
 		break;
-	case 5:
+	case '5':
 		x = 1;
 	default:
 		break;

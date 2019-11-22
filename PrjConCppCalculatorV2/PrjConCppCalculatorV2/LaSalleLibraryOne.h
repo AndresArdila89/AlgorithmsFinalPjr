@@ -121,6 +121,21 @@ float ReadNumber(string label) {
 }
 
 
+char ValidateMenuOption(string label, char conditionOne, char conditionTwo) {
+
+	char value;
+
+	do
+	{
+		value = ReadCharacter(label);
+		value = tolower(value);
+
+	} while (value < conditionOne || value > conditionTwo);
+
+
+	return value;
+}
+
 
 
 //---------------------------------------------------------//
@@ -142,8 +157,8 @@ void windowHeader(string label, char simbol) {
 	cout << '\n';
 }
 
-short menu() {
-	short menuSelection;
+char menu() {
+	char menuSelection;
 
 	system("cls");
 	windowHeader("calculator main menu", '=');
@@ -151,8 +166,10 @@ short menu() {
 	cout << "2.) Substraction.\n";
 	cout << "3.) Multiplication.\n";
 	cout << "4.) Division.\n";
+	cout << "5.) Quit.\n";
 
-	menuSelection = stoi(ReadString("Select the operation you want to do:\n"));
+	menuSelection = ValidateMenuOption("Select the operation you want to perform: ",'1','5');
+
 	system("cls");
 	return menuSelection;
 	
@@ -193,12 +210,51 @@ float Add(float lastResoult) {
 	system("pause");
 	return ans;
 }
+//-------------------- MULTIPLICATION -----------------------//
+float multiplyNumbers(float inputNumOne, float inputNumTwo) {
+	float ans;
+	ans = inputNumOne * inputNumTwo;
+
+	return ans;
+}
+
+
+float calculateMultiplication(string label) {
+	short amountOfNum = ReadNumber(label);
+	float number, ans = 1;
+
+	for (short i = 0; i < amountOfNum; i++) {
+		number = ReadNumber("Enter the number: ");
+		ans = multiplyNumbers(number, ans);
+	}
+
+	return ans;
+}
+
+float Multiply(float lastResoult) {
+	float ans;
+
+	windowHeader("MULTIPLICATION", '=');
+
+	ans = calculateMultiplication("Enter the amount of numbers to multiply: ");
+
+	Display("The answer is: ", ans);
+
+	ans = 0;
+
+	system("pause");
+	return ans;
+}
+
+
+
 
 
 //-------------substraction--------------------------------//
-float substractNumbers(float inputNum, float ans) {
+float substractNumbers(float inputNumOne, float inputNumTwo) {
+	float ans;
 
-	ans = inputNum - ans;
+	ans = inputNumOne - inputNumTwo;
 
 	return ans;
 } 
@@ -207,7 +263,7 @@ float calculateSubstraction(string label) {
 	
 	float numberOne,numberTwo, ans = 0;
 
-	
+		
 		numberOne = ReadNumber("Enter the number: ");
 		numberTwo = ReadNumber("Enter the number: ");
 		ans = substractNumbers(numberOne, numberTwo);
@@ -221,7 +277,7 @@ float Substract(float lastResoult) {
 
 	windowHeader("SUBSTRACTION", '=');
 
-	ans = calculateSubstraction("Enter the amount of numbers to add: ");
+	ans = calculateSubstraction(" ");
 
 	Display("The answer is: ", ans);
 
@@ -230,6 +286,45 @@ float Substract(float lastResoult) {
 	system("pause");
 	return ans;
 }
+
+//-------------------division------------------------------//
+//-------------substraction--------------------------------//
+float divideNumbers(float inputNumOne, float inputNumTwo) {
+	float ans;
+
+	ans = inputNumOne / inputNumTwo;
+
+	return ans;
+}
+
+float calculateDivision(string label) {
+
+	float numberOne, numberTwo, ans = 0;
+
+
+	numberOne = ReadNumber("Enter the number: ");
+	numberTwo = ReadNumber("Enter the number: ");
+	ans = divideNumbers(numberOne, numberTwo);
+
+
+	return ans;
+}
+
+float Divide(float lastResoult) {
+	float ans;
+
+	windowHeader("DIVISION", '=');
+
+	ans = calculateDivision(" ");
+
+	Display("The answer is: ", ans);
+
+	ans = 0;
+
+	system("pause");
+	return ans;
+}
+
 
 //---------------------------------------------------------//
 //------------------ Revenue quebec -----------------------//

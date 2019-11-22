@@ -1,10 +1,11 @@
 ﻿  calculator.cpp
 C:\Users\andres\Documents\AlgorithmsFinalPjr\PrjConCppCalculatorV2\PrjConCppCalculatorV2\LaSalleLibraryOne.h(13,28): warning C4267: '=': conversion from 'size_t' to 'short', possible loss of data
 C:\Users\andres\Documents\AlgorithmsFinalPjr\PrjConCppCalculatorV2\PrjConCppCalculatorV2\LaSalleLibraryOne.h(75,30): warning C4267: '=': conversion from 'size_t' to 'short', possible loss of data
-C:\Users\andres\Documents\AlgorithmsFinalPjr\PrjConCppCalculatorV2\PrjConCppCalculatorV2\LaSalleLibraryOne.h(171,20): warning C4244: 'initializing': conversion from 'float' to 'short', possible loss of data
-C:\Users\andres\Documents\AlgorithmsFinalPjr\PrjConCppCalculatorV2\PrjConCppCalculatorV2\LaSalleLibraryOne.h(286,43): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\andres\Documents\AlgorithmsFinalPjr\PrjConCppCalculatorV2\PrjConCppCalculatorV2\LaSalleLibraryOne.h(291,36): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\andres\Documents\AlgorithmsFinalPjr\PrjConCppCalculatorV2\PrjConCppCalculatorV2\LaSalleLibraryOne.h(378,8): warning C4101: 'tabTemp': unreferenced local variable
-C:\Users\andres\Documents\AlgorithmsFinalPjr\PrjConCppCalculatorV2\PrjConCppCalculatorV2\LaSalleLibraryOne.h(378,20): warning C4101: 'tempStore': unreferenced local variable
+C:\Users\andres\Documents\AlgorithmsFinalPjr\PrjConCppCalculatorV2\PrjConCppCalculatorV2\LaSalleLibraryOne.h(188,20): warning C4244: 'initializing': conversion from 'float' to 'short', possible loss of data
+C:\Users\andres\Documents\AlgorithmsFinalPjr\PrjConCppCalculatorV2\PrjConCppCalculatorV2\LaSalleLibraryOne.h(223,20): warning C4244: 'initializing': conversion from 'float' to 'short', possible loss of data
+C:\Users\andres\Documents\AlgorithmsFinalPjr\PrjConCppCalculatorV2\PrjConCppCalculatorV2\LaSalleLibraryOne.h(381,43): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\andres\Documents\AlgorithmsFinalPjr\PrjConCppCalculatorV2\PrjConCppCalculatorV2\LaSalleLibraryOne.h(386,36): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\andres\Documents\AlgorithmsFinalPjr\PrjConCppCalculatorV2\PrjConCppCalculatorV2\LaSalleLibraryOne.h(473,8): warning C4101: 'tabTemp': unreferenced local variable
+C:\Users\andres\Documents\AlgorithmsFinalPjr\PrjConCppCalculatorV2\PrjConCppCalculatorV2\LaSalleLibraryOne.h(473,20): warning C4101: 'tempStore': unreferenced local variable
 C:\Users\andres\Documents\AlgorithmsFinalPjr\PrjConCppCalculatorV2\PrjConCppCalculatorV2\calculator.cpp(7,8): warning C4101: 'number': unreferenced local variable
   PrjConCppCalculatorV2.vcxproj -> C:\Users\andres\Documents\AlgorithmsFinalPjr\PrjConCppCalculatorV2\Debug\PrjConCppCalculatorV2.exe
