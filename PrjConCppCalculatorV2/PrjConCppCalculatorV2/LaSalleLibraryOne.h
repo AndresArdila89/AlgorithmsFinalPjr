@@ -88,6 +88,10 @@ string verifyIfNumber(string label){
 					i = len;
 				}
 			}
+			if (numberToConv[i] == '-' && i >0) {
+					key = 0;
+					i = len;
+			}
 		}
 		else
 		{
